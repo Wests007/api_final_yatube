@@ -7,7 +7,7 @@ from rest_framework.filters import SearchFilter
 
 from posts.models import Post, Group, Comment, Follow
 from .serializers import PostSerializer, GroupSerializer,\
-                         CommentSerializer, FollowSerializer
+    CommentSerializer, FollowSerializer
 from .permissions import IsAuthorOrReadOnly
 
 
