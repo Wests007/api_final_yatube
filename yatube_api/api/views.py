@@ -6,7 +6,8 @@ from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.filters import SearchFilter
 
 from posts.models import Post, Group, Comment, Follow
-from .serializers import PostSerializer, GroupSerializer, CommentSerializer, FollowSerializer
+from .serializers import PostSerializer, GroupSerializer,\
+                         CommentSerializer, FollowSerializer
 from .permissions import IsAuthorOrReadOnly
 
 
@@ -42,7 +43,7 @@ class CommentViewSet(viewsets.ModelViewSet):
 
 
 class CreateListViewSet(CreateModelMixin, ListModelMixin,
-                            viewsets.GenericViewSet):
+                        viewsets.GenericViewSet):
     pass
 
 
@@ -51,7 +52,7 @@ class FollowViewSet(CreateListViewSet):
     serializer_class = FollowSerializer
     permission_classes = (IsAuthenticated,)
     filter_backends = (SearchFilter,)
-    search_fields = ('following__username',) 
+    search_fields = ('following__username',)
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
