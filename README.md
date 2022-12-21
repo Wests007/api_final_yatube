@@ -1,60 +1,54 @@
-# api_final
+# REST API для проекта TravelTube
 
-### Описание
-Социальная сеть блогеров. Лучшие блогеры пишут здесь! Простой, надежный и понятный API.
+## Описание
+Простой, надежный и понятный API для социальной сети TravelTube.
 
-### Технологии
-Python 3.7
-Django 2.2.19
+## Технологии
+Python 3
+Django 2.2
+Django REST Framework
+Simple-JWT
 
 ### Как запустить проект:
-
 Клонировать репозиторий и перейти в него в командной строке:
-
 ```
 git clone https://github.com/Wests007/api_final_yatube.git
 ```
-
 ```
-cd kittygram
+cd api_final_yatube
 ```
-
 Cоздать и активировать виртуальное окружение:
-
 ```
 python -m venv venv
 ```
-
 ```
 source venv/scripts/activate
 ```
-
-Установить зависимости из файла requirements.txt:
-
+Обновить менеджер пакетов и установить зависимости из файла requirements.txt:
 ```
 python -m pip install --upgrade pip
 ```
-
 ```
 pip install -r requirements.txt
 ```
-
-Выполнить миграции:
-
+Перейти в папку с файлом manage.py и выполнить миграции:
+```
+cd api_yatube
+```
 ```
 python manage.py migrate
 ```
-
 Запустить проект:
-
 ```
 python manage.py runserver
 ```
 
+### В разработке:
+Документация (ReDoc) всех возможных запросов/ответов API.
+
 ### Примеры запросов к API:
 
 - Получение публикаций
-
 GET /api/v1/posts/
 ```
 {
@@ -68,7 +62,6 @@ GET /api/v1/posts/
 ```
 
 - Создание публикации
-
 POST /api/v1/posts/
 
 ```
@@ -78,3 +71,6 @@ POST /api/v1/posts/
     "group": 0
 }
 ```
+
+## Автор
+[Ромашков Александр](https://github.com/Wests007)
