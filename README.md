@@ -4,9 +4,9 @@
 Простой, надежный и понятный API для социальной сети TravelTube.
 
 ## Технологии
-Python 3
-Django 2.2
-Django REST Framework
+Python 3,
+Django 2.2,
+Django REST Framework,
 Simple-JWT
 
 ### Как запустить проект:
